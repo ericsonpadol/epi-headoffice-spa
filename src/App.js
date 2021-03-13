@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React, { Fragment } from 'react';
+
+import { Button, message, Avatar } from 'antd';
+import { UserOutlined } from '@ant-design/icons'
+
+import Header from './components/commons/Header';
+import Login from './components/authentication/Login';
+import Footer from './components/commons/Footer';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+const App = () => {
+  const success = () => message.success('Welcome Jake Ortega!');
+  const myMessage = 'Hello World! ExpressPay!';
+
+  return (<Fragment>
+    <div className="container is-widescreen">
+      <Header welcome="John Cosio" />
+      <Login />
+      <Button onClick={success}>Hello</Button>
+      <Footer company="Teknolohiya Inc." message={myMessage} element={<Avatar size={64} icon={<UserOutlined />} />} />
     </div>
-  );
-}
+  </Fragment>);
+};
 
 export default App;
