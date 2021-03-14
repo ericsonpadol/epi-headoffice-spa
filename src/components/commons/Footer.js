@@ -7,7 +7,7 @@ const Footer = ({ company, message, element }) => {
             <footer className="footer">
                 <div className="content has-text-centered">
                     <p>{message}</p>
-                    <p>powered by: {company}</p>
+                    <p>Developed by: {company}</p>
                 </div>
                 <div>{element}</div>
             </footer>
