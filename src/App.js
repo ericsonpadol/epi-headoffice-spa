@@ -17,7 +17,7 @@ const App = () => {
 
   return (<Fragment>
     <div className="container is-widescreen">
-      <Header welcome="John Cosio" />
+      <Header title="Express Pay Inc." subtitle="Enterprise Backoffice Administration"/>
       <Login />
       <Button onClick={success}>Hello</Button>
       <Footer company="Teknolohiya Inc." message={myMessage} element={<Avatar size={64} icon={<UserOutlined />} />} />
